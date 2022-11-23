@@ -2,17 +2,13 @@
 
 // const pantalla=document.querySelector('body')
 
-
 // let retardo=setTimeout(()=>{
-
 //     pantalla.style.backgroundColor='green'
 //     clearTimeout(retardo)
 //     console.log('se ha limpiado el retardo')
-
 // },10000)
 
-
-//setInteval *****************************************************************************
+//setInteval 
 
 // let contador=0; 
 
@@ -24,13 +20,12 @@
 
 //window.requestAnimationFrame()*****************************************************************
 
-// function holaMundo(){
-//   let saludo=window.requestAnimationFrame(holaMundo)
+function holaMundo(){
+  let saludo=window.requestAnimationFrame(holaMundo)
     
-//   console.log('hola mundo')
+  console.log('hola mundo')
 
-//   saludo>1000 ? window.cancelAnimationFrame(saludo):null
+  saludo>1000 ? window.cancelAnimationFrame(saludo):null
 
-// }
-// holaMundo()
-
+}
+holaMundo()

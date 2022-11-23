@@ -20,45 +20,39 @@ onselect(): cuando se selecciona un texto.
 onunload(): al salir de la página web.
 */ 
 
-
 const boton=document.querySelector('button')
 const cuerpo=document.querySelector('body')
 const formulario=document.querySelector('#formulario')
 
-
-function pulsar(){
-    alert('Has pulsado correctamente')
-}
- 
+// function pulsar(){
+//     alert('Has pulsado correctamente')
+// }
+//escuchador de evento
 window.addEventListener('resize',(e)=>{
     cuerpo.style.backgroundColor='green'
     cuerpo.style.width='100%'
     cuerpo.style.height='1000px'
 })
-
-
-
+//pulso dentro del formulario
 formulario.addEventListener('focus',(e)=>{
     formulario.style.backgroundColor='orangered'
 })
-
+//pulso fuera del formulario
 formulario.addEventListener('blur',(e)=>{
     formulario.style.backgroundColor='black'
 })
 
 formulario.addEventListener('change',(e)=>{
-    cuerpo.style.backgroundColor='yellow'
+    cuerpo.style.backgroundColor='lightgreen'
 })
-
+//click en cualquier parte del body (cuerpo)
 document.addEventListener('click',()=>{
     cuerpo.style.width='300px'
     cuerpo.style.height='300px'
-    cuerpo.style.backgroundColor='blue'
+    cuerpo.style.backgroundColor='pink'
 })
-
+//cambia el tamaño del formulario
 formulario.addEventListener('click',cambiaAlto)
-
-
 function cambiaAlto(){
     formulario.style.height='100px'
 }

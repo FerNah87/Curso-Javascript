@@ -1,12 +1,15 @@
-//VAMOS A ACCEDER AL BODY 
+//Vemos el HTML en la consola
+console.log(document)
+//Vemos solo el Body del HTML en consola
 console.log(document.body)
 
-//VAMOS A CREAR ETIQUETAS DESDE JS 
+//Crea etiquetas desde JS 
 
 let caja=document.createElement('div')
 let caja2=document.createElement('div')
+let caja3=document.createElement('div')
 
-//VAMOS A DAR ESTILOS A NUESTRO DIV 
+//Da estilos al DIV 
 
 caja.style.width='100px'
 caja.style.height='100px'
@@ -16,97 +19,100 @@ caja.style.borderRadius='50%'
 caja2.style.width='100px'
 caja2.style.height='100px'
 caja2.style.backgroundColor='blue'
-caja2.style.borderRadius='50%'
+caja2.style.borderRadius='9px'
 
-//RENDERIZANDO NUESTRO ELEMENTO 
+caja3.style.width='100px'
+caja3.style.height='100px'
+caja3.style.backgroundColor='grey'
+caja3.style.borderRadius='50%'
 
-// document.body.appendChild(caja)
-// document.body.appendChild(caja2)
+//Renderizando los elementos (por eso no se ven) 
 
-document.body.append(caja,caja2)
+document.body.appendChild(caja)
+document.body.appendChild(caja2)
+document.body.appendChild(caja3)
+//document.body.append(caja,caja2,caja3)
 
-//DIFERENCIAS ENTRE APPEND Y APPENDCHILD 
-
+//Diferencia entre APPEND y APPENDCHILD 
 //1.appendchild no permite renderizar más de un elemento 
 //2.append si permite renderizar dos o más
 //3.appendchild no permite renderizar string o cadenas 
 //4.append si permite  meter varios elementos 
 
-//NOS DICE LA CODIFICACIÓN DE CARÁCTERES 
+//Nos dice la codificacion de los caracteres
 
 console.log(document.characterSet)
 
-//CUANTOS HIJOS TIENE EL DOCUMENTO  
+//Cuantos hijos tiene el documento  
 
 console.log(document.childElementCount)
 
-//NODOS HIJOS DEL DOCUMENTO  
+//Nodos hijos del documento  
 
 console.log(document.childNodes)
 
-//PARA DEVOLVERNOS LOS HIJOS QUE TIENE 
+//Devuelve los hijos que tiene
 
 console.log(document.children)
 
-//CLONAR EL DOCUMENTO  
-//se le pase un boolean true o false en función 
-//de si queremos que nos clone también el contenido 
+//Clona el documento  
+//se le pase un boolean true o false en función de si queremos que nos clone también el contenido 
 
 let clonadoBody=document.body.cloneNode(true)
-
 console.log(clonadoBody)
 
-//COMO SABER EL TIPO DE CONTENIDO 
+//Como saber el tipo de contenido
 
 console.log(document.contentType)
 
-//CREANDO ATRIBUTOS 
+//Creando Atributos
 
 let subtitulo=document.querySelector('#sub1')
-
+//crea la clase y le da el titulo
 subtitulo.setAttribute('class','tituloClase')
 
-//SELECCIONAR ELEMENTOS  
+let subti=document.querySelector('#sub2')
+subti.setAttribute('class', 'laconchuda')
+
+// Selecciona Elementos  
 let subtitulo2=document.querySelector('#sub2')
 let subtitulo3=document.querySelector('#sub3')
-
 
 subtitulo2.style.color='red'
 subtitulo3.style.color='green'
 subtitulo3.textContent='AHORA CAMBIO'
 
-
-//CREANDO UN COMENTARIO  
+//Crea un comentario 
 
 let comentario=document.createComment('soy un comentario')
 console.log(comentario)
 
-//FRAGMENT  
+//Fragment  
 
 let container=document.createDocumentFragment()
 document.appendChild(container)
 
-//CREANDO UN NODO DE TEXTO DESDE JAVASCRIPT 
+//Creando un NODO de texto desde JS 
 
 const textNode=document.createTextNode('Soy un nodo de texto')
 document.body.appendChild(textNode)
 
-//ACCEDER A LA ETIQUETA HTML/DOCTYPE 
+//Acceder a la Etiqueta HTML/DOCTYPE 
 
 console.log(document.doctype)
 
-//NOS DA EL ELEMENTO HTML  
+//Nos da el elemento HTML  
 console.log(document.documentElement)
 
 //URI 
 console.log(document.documentURI)
 
-//SABER EL DOMAIN O DOMINIO 
+//Saber el dominio
 console.log(document.domain)
-//PRIMER HIJO 
+//Primer Hijo 
 console.log(document.firstChild)
 
-//PRIMER ELEMENTO HIJO 
+//Primer elemento Hijo
 
 console.log(document.firstElementChild)
 
@@ -116,5 +122,6 @@ const enlaces=[...document.querySelectorAll('a')]
 
 enlaces.map(enlace=>{
     enlace.style.color='red'
+    enlace.style.fontFamily='arial black'
     enlace.style.backgroundColor='pink'
 })
