@@ -7,15 +7,17 @@ class Automovil{
         this.color=color
     }
 
-    //getter 
+    //metodo para agarrar (getter)las propiedades desde fuera y cambiar (setter) las propiedades
+    //getter (acceder)
      get getColor(){
          return this.color
      }
 
-    //setter 
+    //setter (poner / cambiar)
     set setColor(color){
         this.color=color
     }
+
     //métodos
     velocidad(velocidad){
         if(velocidad>200){
@@ -24,7 +26,7 @@ class Automovil{
             return `Para alcanzar tu velocidad máxima faltan ${200-velocidad}Km/h`
         }
     }
-    //métodos estáticos 
+    //métodos estáticos que nunca va a cambiar
     static ruedas(){
         return "Tengo las ruedas de serie"
     }
@@ -42,8 +44,7 @@ console.log(coche.velocidad(100))
 console.log(Automovil.ruedas())
 
 //Herencia  
-//constructor de clase heredada primero ponemos 
-//las caracteristicas propias y luego lo que heredo 
+//constructor de clase heredada primero ponemos las caracteristicas propias y luego lo que heredo 
 
 //En el super solo lo que heredamos
 
@@ -61,3 +62,20 @@ class Nautica extends Automovil {
 const titanic=new Nautica('metal','carbón','titanic','titanicModel')
 
 console.log(titanic.color='verde')
+
+//POO con clases SOLUCIONADO EL ERROR
+class Animal {
+    constructor(nombre, edad, raza){
+        this.nombre = nombre
+        this.edad = edad
+        this.raza = raza
+    }
+}
+
+class Domestico extends Animal {
+    constructor(nombre, edad, raza, colorPelaje){
+        super(nombre, edad, raza)
+
+        this.colorPelaje = colorPelaje
+    }
+}

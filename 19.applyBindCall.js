@@ -5,19 +5,17 @@ const cafeteria={
     }
 }
 
-
 const persona = {
     nombre:'Emilio'
 }
 
 //call(acceder al contexto de otro objeto)
 
-let accederCall=cafeteria.actividades.call(persona,'billar')
+let accederCall=cafeteria.actividades.call(persona,'ping-pong')
 
 //apply(acceder al contexto de otro objeto)
 
 let accederApply=cafeteria.actividades.apply(persona,['poker'])
-
 
 //bind(retorna una nueva función con el nuevo contexto)
 

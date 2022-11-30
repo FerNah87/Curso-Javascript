@@ -12,8 +12,6 @@ Tiburon.prototype.atacar=function(){
 const tintorera=new Tiburon('tintorera','prionace glauca')
 console.log(tintorera.atacar())
 
-
-
 //Herencia en los prototipos 
 
 function TiburonToro(nombre,cientifico,peligrosidad){
@@ -28,7 +26,7 @@ TiburonToro.prototype.constructor=Tiburon
 
 //sobreescritura de metodos 
 TiburonToro.prototype.atacar=function(){
-    console.log('Cuidado fuera del agua ,toro en las proximidades')
+    console.log('Cuidado!! fuera del agua, toro en las proximidades')
 }
 
 //metodos 
@@ -38,7 +36,3 @@ TiburonToro.prototype.mutilar=function(){
 
 costero.atacar()
 costero.mutilar()
-
-
-
-
