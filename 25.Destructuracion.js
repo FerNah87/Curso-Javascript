@@ -8,7 +8,7 @@ const mascota={
 
 const{raza,color,edad,propietario}=mascota
 
-
+console.log(raza)
 console.log(edad)
 console.log(propietario)
 
@@ -19,3 +19,4 @@ const camareras=['Juanita','Carla','Michaella','Gabriela']
 const[Juanita,Carla,Michaella,Gabriela]=camareras
 
 console.log(Carla)
+console.log(Gabriela)

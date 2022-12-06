@@ -1,3 +1,4 @@
+//Ejemplo
 const automovil=function(color,marca,velocidadMax){
    this.color=color
    this.marca=marca 
