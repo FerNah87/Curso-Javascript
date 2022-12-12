@@ -1,3 +1,4 @@
+//ejemplo del 27
 
 class Animal{
     constructor(nombre,raza){

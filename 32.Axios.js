@@ -1,13 +1,14 @@
+//Axios es una libreria que pasa al formato json la informacion que trae
+//se tiene que instalar AXIOS o utilizar la libreria (https://axios-http.com/docs/intro)
 const getUsers=async()=>{
- 
     try{
     const res= await axios('https://jsonplaceholder.typicode.com/users')
+    //se cambia RES JSON por RES DATA
     const users=await  res.data
     console.log(users)
     
     for(user of users){
-        document.body.innerHTML+=`
-          
+        document.body.innerHTML+=` 
         <ul>
           <li>
               ${user.id}<br> 
@@ -16,8 +17,6 @@ const getUsers=async()=>{
               ${user.username}
           </li>
         </ul>
-        
-        
         `
     }
     
@@ -25,11 +24,7 @@ const getUsers=async()=>{
     
     console.log(error)
     
-    }finally{console.log('oleeeee')}
+    }finally{console.log('Se puede ahora con Axios')}
     
-    
-    
-    }
-    getUsers()
-    
-    
+}
+getUsers()
