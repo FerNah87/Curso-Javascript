@@ -1,5 +1,4 @@
-//Es un dato primitivo que nos permite 
-//crear identificadores unicos 
+//Es un dato primitivo que nos permite  crear identificadores unicos 
 //y evitar colisiones 
 
 let nombre1=Symbol('nombre')

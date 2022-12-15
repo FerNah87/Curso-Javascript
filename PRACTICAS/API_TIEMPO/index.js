@@ -1,8 +1,9 @@
+//se crean las variables de coordenada
 let longitude 
 let latitude  
 let url
 
-
+//geolocalizaion del navegador
 if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(posicion=>{
 

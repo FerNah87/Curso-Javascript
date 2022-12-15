@@ -10,7 +10,6 @@ const botonCerrar=document.querySelector('#cerrar')
 const botonBorrar=document.querySelector('#borrar')
 
 //2.VALIDAMOS LOS DATOS ****************************************** 
-
 function validarNombre(nombre){
     if(nombre.trim()){
         if(nombre.length<10)
@@ -41,13 +40,7 @@ function validarContrasena(contrasena){
     }
 }
 
-
-
-
-
-
 //1.LEEMOS EL FORMULARIO ************************************************************
-
 window.document.addEventListener('change',(e)=>{
     e.preventDefault()
 
@@ -58,7 +51,6 @@ window.document.addEventListener('change',(e)=>{
 })
 
 //3.GUARDANDO DATOS  *************************************************************** 
-
 formulario.addEventListener('submit',(e)=>{
     e.preventDefault()
 
@@ -81,16 +73,12 @@ formulario.addEventListener('submit',(e)=>{
  contrasena.value=""
  arrayDatos.splice(0,4)
 
-
-
 })
 //6.IMPRESIÓN DATOS EN PÁGINA***********************************************
 let data;
 
 function impresionDatos(datos){
     data=JSON.parse(localStorage.getItem(`${datos}`))
-
-   
 
     const contenido=document.querySelector('.contenido') 
     const nombreImprimir=document.createElement('h3') 
@@ -109,12 +97,10 @@ function impresionDatos(datos){
    
     contenido.append(nombreImprimir,apellido1Imprimir,apellido2Imprimir)
 
-
 }
 impresionDatos()
 
 //7.BORRAR DATOS **********************************************************************
-
 window.addEventListener('click',(e)=>{
 
     if(e.target.matches('#cerrar')){
@@ -130,9 +116,7 @@ window.addEventListener('click',(e)=>{
 
 })
 
-
 //5.VERIFICAR USUARIO 
-
 function verificarAcceso(contrasenaAcceso){
   
     for(let i=0;i<localStorage.length;i++){
@@ -143,7 +127,6 @@ function verificarAcceso(contrasenaAcceso){
 }
 
 //4.LEEMOS EL FORMULARIO  
-
 window.addEventListener('change',(e)=>{
     e.preventDefault()
 

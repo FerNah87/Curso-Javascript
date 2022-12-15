@@ -6,9 +6,8 @@ let mochila=new Set(['linterna',
                      'lata sardinas'
                    ])
 
-//comprobar si un elemento se encuentra dentro 
-//del set 
-
+//comprobar si un elemento se encuentra dentro del set 
+//Naranja no se encuentra en la mochila
 console.log(mochila.has('naranja'))
 
 //Eliminamos elementos del set 
@@ -19,10 +18,13 @@ console.log(mochila)
 //Añadimos elementos en el set 
 mochila.add('fruta')
 mochila.add('naranja')
+
 //Tamaño del set  
 console.log(mochila.size)
+
 //intentamos repetir un dato 
 mochila.add('linterna')
+
 //convertimos el set en un array 
 
 const mochilaArray=[...mochila]

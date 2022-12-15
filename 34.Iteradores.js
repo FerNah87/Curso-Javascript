@@ -1,3 +1,5 @@
+//Un iterador es un objeto que permite recorrer una coleccion y 
+//devolver un valor al terminar
 let numbers=new Set([1,2,3,4,5,6,7,8,9])
 
 let iterador=numbers[Symbol.iterator]()
